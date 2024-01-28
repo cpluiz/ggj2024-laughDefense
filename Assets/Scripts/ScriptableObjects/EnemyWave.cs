@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyWave : MonoBehaviour
+[CreateAssetMenu(fileName = "EnemyWaveContent", menuName = "Enemy/EnemyWave")]
+public class EnemyWave : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    public EnemyWaveContent[] waveContent;
+}
+[System.Serializable]
+public class EnemyWaveContent
+{
+    public EnemyDescriptor enemyDescriptor;
+    public int troopsInThisWave;
+    public float intervalBetweenSpawn;
 }

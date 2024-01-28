@@ -1,0 +1,1 @@
+ScenaryBackground from Wikimedia Commons, by GerryShaw: https://commons.wikimedia.org/wiki/File:Chk-UCH1-GFAP-20X-1.jpg

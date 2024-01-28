@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : NavegationAgent
 {
-    // Start is called before the first frame update
-    void Start()
+    new protected void Awake()
     {
-        
+        base.Awake();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetEnemyValues(EnemyDescriptor descriptor, Transform destination)
     {
-        
+        gameObject.tag = descriptor.Tag;
+        _agent.speed = descriptor.WalkingSpeed;
+        _finalTarget = destination;
+        _agent.SetDestination(_finalTarget.position);
+        TargetDetector targetDetector = GetComponentInChildren<TargetDetector>();
+        //TODO set target layer
     }
 }

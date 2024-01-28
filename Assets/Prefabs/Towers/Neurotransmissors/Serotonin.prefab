@@ -80,6 +80,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
         type: 3}
+      propertyPath: LayersToDetect.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
       propertyPath: _layersToDetect.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -98,6 +103,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Serotonin
       objectReference: {fileID: 0}
+    - target: {fileID: 7694924418267576214, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62e8bfb052ae4cd4b8b79b09a2b7ab1a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

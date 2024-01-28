@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &209336886980694522
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.104
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.478
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490339127458015306, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: _agent
+      value: 
+      objectReference: {fileID: 6261480216397032256}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Serotonin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: _tags.Array.data[1]
+      value: Dopamin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: _tags.Array.data[2]
+      value: Neuroepinefrin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: _tags.Array.data[3]
+      value: GABA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146126581108167498, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: LayersToDetect.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580876342700568798, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_Name
+      value: Anxiety
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694924418267576214, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e7335c09f194c54fa59411f314af1b6, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7580876342700568798, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6261480216397032256}
+  m_SourcePrefab: {fileID: 100100000, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90, type: 3}
+--- !u!195 &7392536626900056792 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 7237326585323318050, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+    type: 3}
+  m_PrefabInstance: {fileID: 209336886980694522}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7769580258303058212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7580876342700568798, guid: 4c977f2c0ed15fa40b1eec1a33ee6f90,
+    type: 3}
+  m_PrefabInstance: {fileID: 209336886980694522}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6261480216397032256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769580258303058212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba463b4868c40749a761935d7248732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 7392536626900056792}
+  _finalTarget: {fileID: 0}
+  _currentTarget: {fileID: 0}

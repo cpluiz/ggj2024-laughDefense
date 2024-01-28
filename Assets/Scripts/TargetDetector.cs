@@ -1,19 +1,20 @@
 using UnityEngine;
 using Cinemachine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Collider))]
 public class TargetDetector : MonoBehaviour
 {
-    [SerializeField]
-    private LayerMask _layersToDetect;
+    [FormerlySerializedAs("_layersToDetect")]
+    public LayerMask LayersToDetect;
     [TagField, SerializeField] private string[] _tags;
     [SerializeField] private NavegationAgent _agent;
-    private List<GameObject> _targets;
+    private List<Transform> _targets;
 
     private void Awake()
     {
-        _targets = new List<GameObject>();
+        _targets = new List<Transform>();
         if(_agent == null)
         {
             _agent = GetComponentInParent<NavegationAgent>();
@@ -23,16 +24,16 @@ public class TargetDetector : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (_agent == null) return;
-        if((_layersToDetect & (1<<other.gameObject.layer)) != 0)
+        if((LayersToDetect & (1<<other.gameObject.layer)) != 0)
         {
             foreach(string  tag in _tags)
             {
                 if (other.gameObject.CompareTag(tag))
                 {
                     Debug.Log("New target found");
-                    if (!_targets.Contains(other.gameObject))
+                    if (!_targets.Contains(other.transform))
                     {
-                        _targets.Add(other.gameObject);
+                        _targets.Add(other.transform);
                     }
                 }
             }
@@ -50,13 +51,14 @@ public class TargetDetector : MonoBehaviour
         }
         else
         {
-            GameObject nearest = null;
+            Transform nearest = null;
             float nearestDistance = Mathf.Infinity;
-            foreach(GameObject target in _targets)
+            List<Transform> toRemove = new List<Transform>();
+            foreach(Transform target in _targets)
             {
                 if(target == null)
                 {
-                    _targets.Remove(target);
+                    toRemove.Add(target);
                     continue;
                 }
                 float targetDistance = Mathf.Sign(Vector3.Distance(_agent.transform.position, target.transform.position));
@@ -66,7 +68,14 @@ public class TargetDetector : MonoBehaviour
                     nearest = target;
                 }
             }
-            _agent.SetTarget(nearest.transform);
+            if(toRemove.Count > 0)
+            {
+                foreach (Transform target in toRemove)
+                {
+                    _targets.Remove(target);
+                }
+            }
+            _agent.SetTarget(nearest);
         }
     }
 }
