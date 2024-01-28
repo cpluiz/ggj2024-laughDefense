@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Photo: {fileID: 21300000, guid: d8c73603f616b0b49addb3aad009cf33, type: 3}
   Cost: 0
+  SpawnInterval: 2
   Neurotransmiter: {fileID: 11400000, guid: a5aeabbc5905cfb4cbb3001750ee76c2, type: 2}
+  prefab: {fileID: 9166908489843151425, guid: fae0f49a956a62246816825af0035964, type: 3}

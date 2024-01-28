@@ -31,6 +31,6 @@ public class TowerSelectionManager : MonoBehaviour
 
     public void RaiseTowerSelected(TowerDescriptor tower)
     {
-
+        _towerSelector.SpawnTower(tower);
     }
 }
