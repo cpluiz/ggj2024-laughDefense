@@ -218,7 +218,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.52
+  m_Radius: 3
   m_Height: 2.76
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f662074ff0c337c45b696cfb26cc9cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LayersToDetect:
+  LayerToDetect:
     serializedVersion: 2
     m_Bits: 0
   _tags: []

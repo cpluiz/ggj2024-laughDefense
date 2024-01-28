@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
-    [SerializeField] private Neurotransmiter m_Prefab;
+    [SerializeField] private NeurotransmiterDescriptor m_descriptor;
     [SerializeField] private Transform[] m_Target;
     [SerializeField] private GameObject m_SpawnPoint;
     [SerializeField] private float _spawnIntervall;
@@ -30,8 +30,8 @@ public class TowerSpawner : MonoBehaviour
         {
             if(Time.time >= nextSpawnTime)
             {
-                neurotransmiter = Instantiate<Neurotransmiter>(m_Prefab, m_SpawnPoint.transform.position, m_SpawnPoint.transform.rotation);
-                neurotransmiter.SetDestination(m_Target[Random.Range(0, m_Target.Length)]);
+                neurotransmiter = Instantiate<Neurotransmiter>(m_descriptor.prefab, m_SpawnPoint.transform.position, m_SpawnPoint.transform.rotation);
+                neurotransmiter.SetNeurotransmiterValues(m_descriptor, m_Target[Random.Range(0, m_Target.Length)]);
                 nextSpawnTime = Time.time + _spawnIntervall;
             }
             yield return new WaitForEndOfFrame();

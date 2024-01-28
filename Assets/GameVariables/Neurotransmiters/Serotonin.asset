@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e031f71a4aa16e8409522701cddbe6f5, type: 3}
-  m_Name: Anxiety
+  m_Script: {fileID: 11500000, guid: a54bf2490a6cf6243805656ad60a6c6f, type: 3}
+  m_Name: Serotonin
   m_EditorClassIdentifier: 
   Photo: {fileID: 0}
-  WalkingSpeed: 1.5
-  Life: 50
-  Dammage: 10
-  Tag: Anxiety
-  StrongAgainst: []
-  prefab: {fileID: 6261480216397032256, guid: abb39122871a93646b44c7031b7b79bd, type: 3}
-  AbsorbsFrom:
-  - Dopamin
+  WalkingSpeed: 1.3
+  Life: 300
+  Dammage: 40
+  Tag: Serotonin
+  StrongAgainst:
+  - Anxiety
+  prefab: {fileID: 1641044639390626549, guid: e05b58024d093da4abcfa032ff534b35, type: 3}

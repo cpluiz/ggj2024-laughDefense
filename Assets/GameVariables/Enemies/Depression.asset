@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e031f71a4aa16e8409522701cddbe6f5, type: 3}
   m_Name: Depression
   m_EditorClassIdentifier: 
-  prefab: {fileID: 187841830339099247, guid: 6c69c03ebbfae8546acbf3ef3a2b3dea, type: 3}
   Photo: {fileID: 0}
   WalkingSpeed: 0.5
   Life: 200
-  Dammage: 5
+  Dammage: 50
   Tag: Depression
   StrongAgainst:
   - Dopamin
+  prefab: {fileID: 187841830339099247, guid: 6c69c03ebbfae8546acbf3ef3a2b3dea, type: 3}
   AbsorbsFrom:
   - Dopamin
   - Neuroepinefrin

@@ -6,10 +6,10 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Collider))]
 public class TargetDetector : MonoBehaviour
 {
-    [FormerlySerializedAs("_layersToDetect")]
-    public LayerMask LayersToDetect;
+    [FormerlySerializedAs("LayersToDetect")]
+    public LayerMask LayerToDetect;
     [TagField, SerializeField] private string[] _tags;
-    [SerializeField] private NavegationAgent _agent;
+    [SerializeField] private BrainAgent _agent;
     private List<Transform> _targets;
 
     private void Awake()
@@ -17,16 +17,16 @@ public class TargetDetector : MonoBehaviour
         _targets = new List<Transform>();
         if(_agent == null)
         {
-            _agent = GetComponentInParent<NavegationAgent>();
+            _agent = GetComponentInParent<BrainAgent>();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (_agent == null) return;
-        if((LayersToDetect & (1<<other.gameObject.layer)) != 0)
+        if((LayerToDetect & (1<<other.gameObject.layer)) != 0)
         {
-            foreach(string  tag in _tags)
+            foreach(string tag in _tags)
             {
                 if (other.gameObject.CompareTag(tag))
                 {

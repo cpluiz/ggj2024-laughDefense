@@ -64,6 +64,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1641044639390626549, guid: e05b58024d093da4abcfa032ff534b35,
         type: 3}
+    - target: {fileID: 7143073361523198676, guid: c7c04d416d4a8e94f88bf22b4bfb71df,
+        type: 3}
+      propertyPath: m_descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: cab69262633f09a46bc16dbe4cd9af86,
+        type: 2}
+    - target: {fileID: 7143073361523198676, guid: c7c04d416d4a8e94f88bf22b4bfb71df,
+        type: 3}
+      propertyPath: _spawnIntervall
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8054626276720116562, guid: c7c04d416d4a8e94f88bf22b4bfb71df,
         type: 3}
       propertyPath: m_Name
