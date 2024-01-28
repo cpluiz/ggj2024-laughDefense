@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
@@ -14,7 +12,7 @@ public class MainMenuManager : MonoBehaviour
     }
     public void StartGame()
     {
-        //TODO Implement start game logic
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     public void ShowMainCanvas()
     {

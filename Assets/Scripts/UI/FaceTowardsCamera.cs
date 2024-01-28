@@ -11,7 +11,7 @@ public class FaceTowardsCamera : MonoBehaviour
 
     private void LookAtCamera()
     {
-        transform.LookAt(Camera.main.transform, transform.up);
+        transform.LookAt(Camera.main.transform, Vector3.up);
         transform.Rotate(new Vector3(0,180,0));
     }
 

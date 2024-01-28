@@ -10,10 +10,20 @@ public class TowerDescriptorDrawer : MonoBehaviour
     [SerializeField]
     private TMPro.TextMeshProUGUI _towerCost;
 
-    public void SetTowerInfo(TowerDescriptor towerInfo)
+    private TowerDescriptor _towerDescriptor;
+    private TowerSelectionManager _selectionManager;
+
+    public void SetTowerInfo(TowerDescriptor towerInfo, TowerSelectionManager selectionManager)
     {
+        _towerDescriptor = towerInfo;
         _towerImage.sprite = towerInfo.Photo;
         _towerName.text = towerInfo.Neurotransmiter.name;
         _towerCost.text = $"Cost: {towerInfo.Cost}";
+        _selectionManager = selectionManager;
+    }
+
+    public void RaiseTowerSelected()
+    {
+        _selectionManager.RaiseTowerSelected(_towerDescriptor);
     }
 }

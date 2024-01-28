@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class TowerSelector : MonoBehaviour
 {
-    private void OnMouseEnter()
+    [SerializeField] private Canvas _selectorCanvas;
+
+    private void OnMouseDown()
     {
-        Debug.LogWarning("Funciona");
+        _selectorCanvas.gameObject.SetActive(!_selectorCanvas.gameObject.activeSelf);
     }
 }

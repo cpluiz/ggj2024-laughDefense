@@ -12,7 +12,7 @@ public class ColorPaletteManager : MonoBehaviour
     private static ColorPaletteManager _instance;
     public static ColorPaletteManager Instance
     {
-        get { 
+        get {
             return _instance; 
         }
     }

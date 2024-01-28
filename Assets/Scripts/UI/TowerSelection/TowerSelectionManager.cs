@@ -12,6 +12,9 @@ public class TowerSelectionManager : MonoBehaviour
     [SerializeField]
     private TowerDescriptor[] availableTowers;
 
+    [SerializeField]
+    private TowerSelector _towerSelector;
+
     protected void Awake()
     {
         foreach(TowerDescriptor tower in availableTowers)
@@ -23,6 +26,11 @@ public class TowerSelectionManager : MonoBehaviour
     private void InitTowerButton(TowerDescriptor towerInfo)
     {
         TowerDescriptorDrawer towerDescriptorDrawer = Instantiate<TowerDescriptorDrawer>(_towerButtonPrefab, _towerButtonsContainer);
-        towerDescriptorDrawer.SetTowerInfo(towerInfo);
+        towerDescriptorDrawer.SetTowerInfo(towerInfo, this);
+    }
+
+    public void RaiseTowerSelected(TowerDescriptor tower)
+    {
+
     }
 }
